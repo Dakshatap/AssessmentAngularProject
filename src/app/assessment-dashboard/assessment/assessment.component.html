@@ -1,0 +1,152 @@
+<div>
+    <div class="d-flex bd-highlight mb-3 border-bottom">
+        <div class="p-2 bd-highlight border-end">Assissment</div>
+        <div class="p-2 bd-highlight">My Assissment</div>
+        <div class="ms-auto p-2 bd-highlight">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+        </div>
+    </div>
+
+</div>
+<div>
+    <h6>Assessments Overview</h6>
+</div>
+
+<!--Assessments overview details -->
+<div class="p-2">
+    <div class="d-flex bd-highlight border rounded">
+        <div class="p-3 flex-fill bd-highlight border-end">
+            <span class="d-block fontsize">Total Assessments</span>
+            <br>
+            <i class="fa fa-bars iconbgcolour" aria-hidden="true">
+            </i>
+            <span class="p-2">38</span>
+        </div>
+        <div class="p-3 flex-fill bd-highlight border-end">
+            <span class="d-block fontsize">Candidates</span>
+            <br>
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <i class="fa fa-users iconbgcolour" aria-hidden="true"></i>
+
+                </div>
+                <div class="p-2 flex-fill bd-highlight border-end">
+                    <span class="p-2">11,145 <small class="count">+89</small></span> <br>
+                    <span class="fontsizedata">Total Candidates</span>
+                </div>
+                <div class="p-2 flex-fill bd-highlight"><span class="p-2">1,14<small class="count">+89</small></span>
+                    <br>
+                    <span class="fontsizedata">Total Attamped</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="p-3 flex-fill bd-highlight border-end">
+            <span class="d-block fontsize">Candidates Sources</span>
+            <br>
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <i class="fa fa-globe iconbgcolour" aria-hidden="true"></i>
+
+                </div>
+                <div class="p-2 flex-fill bd-highlight border-end">
+                    <span class="p-2">11,000 <small class="count">+89</small></span> <br>
+                    <span class="fontsizedata">E-mail</span>
+                </div>
+                <div class="p-2 flex-fill bd-highlight border-end"><span class="p-2">145<small
+                            class="count">+89</small></span> <br>
+                    <span class="fontsizedata">Social Share</span>
+                </div>
+
+                <div class="p-2 flex-fill bd-highlight"><span class="p-2">145<small class="count">+89</small></span>
+                    <br>
+                    <span class="fontsizedata">Unique Link</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-3 flex-fill bd-highlight">
+            <span class="d-block fontsize">Total Purpose</span>
+            <br>
+            <i class="fa fa-link iconbgcolour" aria-hidden="true">
+            </i>
+            <span class="p-2">11</span>
+        </div>
+    </div>
+</div>
+
+
+<!--My Assessments details-->
+<div class="p-2">
+    <h6>My Assessments</h6>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary 
+                    rounded-circle circle-class">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                        <br>
+                    </div>
+                    <div>
+                        <h6 style="padding-left: 90px;padding-top: 10px;">New Assessment</h6>
+                        <span style="font-size: 13px;">From her you can add questions of multiple types like MCQs,
+                            subjective(text or paragraph)!</span>
+                    </div>
+                </h5>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-sm-4" *ngFor="let item of assessmentData">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <div class="d-flex bd-highlight">
+                        <div class="p-2 w-100 bd-highlight">
+                            <i class="fa fa-briefcase iconbgcolour" aria-hidden="true"></i>
+                        </div>
+                        <div class="p-2 flex-shrink-1 bd-highlight">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </h5>
+                <span>{{item.subject}}</span><br>
+                <div class="border-bottom p-2">
+                    <span class="border-end p-1">{{item.purpose}}</span>
+                    <i class="fa fa-calendar p-3" aria-hidden="true"></i>
+                    <span>20 Apr 2023</span>
+                </div>
+                <div class="d-flex bd-highlight">
+                    <div class="flex-grow-1 bd-highlight">
+                        <span>{{item.duration}}</span><br>
+                        <span style="font-size: 13px;">Duration</span>
+                    </div>
+                    <div class="flex-grow-1 bd-highlight">
+                        <span>{{item.question}}</span><br>
+                        <span style="font-size: 13px;">Question</span>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <button type="button" class="share-btn">
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                            Share</button>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <button type="button" class="btn btn-danger 
+        rounded-circle circle-class">LP</button>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
