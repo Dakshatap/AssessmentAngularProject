@@ -1,19 +1,22 @@
 <div>
     <div class="d-flex bd-highlight mb-3 border-bottom">
-        <div class="p-2 bd-highlight border-end">Assissment</div>
+        <div class="p-2 bd-highlight border-end smallHide">Assissment</div>
         <div class="p-2 bd-highlight">My Assissment</div>
         <div class="ms-auto p-2 bd-highlight">
-            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <i class="fa fa-search bbigHide" aria-hidden="true"></i>
+            <i class="fa fa-filter bbigHide" aria-hidden="true"></i>
+            <i class="fa fa-signal bbigHide" aria-hidden="true"></i>
+            <i class="fa fa-mobile smallHide" aria-hidden="true"></i>
         </div>
     </div>
 
 </div>
-<div>
+<div class="smallHide">
     <h6>Assessments Overview</h6>
 </div>
 
 <!--Assessments overview details -->
-<div class="p-2">
+<div class="p-2 smallHide">
     <div class="d-flex bd-highlight border rounded">
         <div class="p-3 flex-fill bd-highlight border-end">
             <span class="d-block fontsize">Total Assessments</span>
@@ -78,11 +81,12 @@
 
 <!--My Assessments details-->
 <div class="p-2">
-    <h6>My Assessments</h6>
+    <h6 class="p-2">My Assessments</h6>
 </div>
-<div class="row">
+<div class="row p-2">
+    <!--Add Assessments-->
     <div class="col-sm-4">
-        <div class="card">
+        <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">
                     <div class="d-flex justify-content-center">
@@ -98,14 +102,14 @@
                             subjective(text or paragraph)!</span>
                     </div>
                 </h5>
-
             </div>
-
-
         </div>
     </div>
+
+
+    <!-- Fetch Data Dynamically------>
     <div class="col-sm-4" *ngFor="let item of assessmentData">
-        <div class="card">
+        <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">
                     <div class="d-flex bd-highlight">
@@ -123,7 +127,7 @@
                     <i class="fa fa-calendar p-3" aria-hidden="true"></i>
                     <span>20 Apr 2023</span>
                 </div>
-                <div class="d-flex bd-highlight">
+                <div class="d-flex bd-highlight justify-content-between">
                     <div class="flex-grow-1 bd-highlight">
                         <span>{{item.duration}}</span><br>
                         <span style="font-size: 13px;">Duration</span>
@@ -132,15 +136,18 @@
                         <span>{{item.question}}</span><br>
                         <span style="font-size: 13px;">Question</span>
                     </div>
-                    <div class="p-2 bd-highlight">
+                    <div class="flex-grow-1 bd-highlight">
                         <button type="button" class="share-btn">
                             <i class="fa fa-share-alt" aria-hidden="true"></i>
                             Share</button>
                     </div>
-                    <div class="p-2 bd-highlight">
-                        <button type="button" class="btn btn-danger 
-        rounded-circle circle-class">LP</button>
-
+                    <div class="pt-2 flex-grow-1 bd-highlight position-relative">
+                        <button type="button"
+                            class="btn btn-danger position-absolute rounded-circle circle-class">LP</button>
+                        <button type="button"
+                            class="btn btn-primary ms-2 position-absolute rounded-circle circle-class">MP</button>
+                        <button type="button"
+                            class="btn btn-info ms-3 position-absolute rounded-circle circle-class">SP</button>
                     </div>
                 </div>
 

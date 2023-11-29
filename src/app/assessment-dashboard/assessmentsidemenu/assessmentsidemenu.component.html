@@ -1,31 +1,52 @@
-<ul class="list-group">
-    <li class="list-group-item text-center border-0">
-        <i class="fa fa-th" aria-hidden="true"></i> 
-        <br>
-        <small>Dashboard</small>
-    </li>
-    <li class="list-group-item text-center border-0">
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <br>
-        <small>Assessment</small>
-    </li>
-    <li class="list-group-item text-center border-0">
-        <i class="fa fa-clone" aria-hidden="true"></i>
-        <br>
-        <small>My Library</small>
-    </li>
-    <li>
-        <div class="line">
-
+<div class="sideMenu">
+    <div class="d-flex justify-content-between bigHide">
+        <div class="sideBox">
+            <div class="barIcon">
+                <i class="fa fa-bars" style="cursor: pointer;" (click)="bar()" aria-hidden="true"></i> <span class="ps-2">Assessment</span>
+            </div>
         </div>
-    </li>
-    <li>
-        <button type="button" class="admin-btn">Admin</button>
+        <div class="sideBox">
+            <i class="fa fa-laptop" aria-hidden="true"></i>
+        </div>
+    </div>
 
-    </li>
-    <li class="list-group-item text-center border-0">
-        <i class="fa fa-refresh" aria-hidden="true"></i>
-        <br>
-        <small>Round Status</small>
-    </li>
-  </ul>
+    <div class="mobMenu" *ngIf="isMobMenu">
+        <div class="d-flex justify-content-between bigHide">
+            <div class="sideBox">
+                <div class="barIcon">
+                    Menu
+                </div>
+            </div>
+            <div class="sideBox">
+                <i class="fa fa-times" style="cursor: pointer;" (click)="bar()" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item border-0">
+                <i class="fa fa-th" aria-hidden="true"></i>
+                <small>Dashboard</small>
+            </li>
+            <li class="list-group-item border-0">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <small>Assessment</small>
+            </li>
+            <li class="list-group-item border-0">
+                <i class="fa fa-clone" aria-hidden="true"></i>
+                <small>My Library</small>
+            </li>
+            <li>
+                <div class="line">
+                </div>
+            </li>
+            <li class="position-relative">
+                <button type="button" class="admin-btn">Admin</button>
+
+            </li>
+            <li class="list-group-item border-0 roundStatus">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+                <small>Round Status</small>
+            </li>
+        </ul>
+    </div>
+</div>

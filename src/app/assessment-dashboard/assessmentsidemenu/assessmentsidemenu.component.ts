@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assessmentsidemenu.component.scss']
 })
 export class AssessmentsidemenuComponent implements OnInit {
-
+  isMobMenu: boolean = false;
   constructor() { }
   sidemenulist = [
     {
       title: 'Dashboard',
-      icon:'./assets/icon/dashboard.svg'
+      icon: './assets/icon/dashboard.svg'
     },
     {
       title: 'Assessments',
@@ -22,10 +22,24 @@ export class AssessmentsidemenuComponent implements OnInit {
   ]
 
 
-
+  bar() {
+    this.isMobMenu = !this.isMobMenu;
+  }
 
   ngOnInit(): void {
     this.sidemenulist
+    let width = screen.width;
+    console.log('width', width)
+    if (width > 499) {
+      this.isMobMenu = true;
+      console.log('width lapi', width)
+
+    } else {
+      this.isMobMenu = false;
+      console.log('width mob', width)
+
+
+    }
   }
 
 }
